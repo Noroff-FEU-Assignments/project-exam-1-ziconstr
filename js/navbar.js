@@ -1,17 +1,6 @@
-const container = document.querySelector(".container");
-const primaryNav = document.querySelector(".nav__list");
-const toggleButton = document.querySelector(".nav-toggle");
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-toggleButton.addEventListener("click", () => {
-    const isExpanded = primaryNav.getAttribute("aria-expanded");
-    primaryNav.setAttribute(
-        "aria-expanded",
-        isExpanded === "false" ? "true" : "false"
-    );
-});
-
-container.addEventListener("click", (e) => {
-    if (!primaryNav.contains(e.target) && !toggleButton.contains(e.target)) {
-        primaryNav.setAttribute("aria-expanded", "false");
-    }
-});
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
