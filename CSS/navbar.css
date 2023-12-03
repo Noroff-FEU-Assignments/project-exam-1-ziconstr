@@ -14,13 +14,29 @@ html {
 }
 
 .navbar {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    padding: 0.75rem 5vw;
-    box-shadow: 0 0 30px lightgray;
+    padding: 0.70rem 15vw;
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+    
+
+    
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #fff;
+    z-index: 1000;
+
+  }
+
 
 .brand-title {
     font-size: 1.5rem;

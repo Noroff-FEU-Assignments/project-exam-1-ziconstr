@@ -19,10 +19,6 @@
     <link rel="stylesheet" href="/CSS/navbar.css">
     <link rel="stylesheet" href="/CSS/slider.css">
 
-<!-- CSS -->
-    <script defer src="/JS/navbar.js"></script>
-    <script defer src="/JS/slider.js"></script>
-
 
 <!-- Hotjar Tracking Code for Food and Tech -->
 
@@ -42,6 +38,7 @@
 
 
 <body>
+  <main>
     <header>
         <!-- Main Navigation inside <header> -->
         <nav class="navbar">
@@ -54,7 +51,7 @@
             <div class="navbar-links">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/index.html">Blogs</a></li>
+                    <li><a href="/blogs.html">Blogs</a></li>
                     <li><a href="/index.html">About</a></li>
                     <li><a href="/index.html">Contact</a></li>
                 </ul>
@@ -65,7 +62,6 @@
 <!-- The rest of your webpage content goes here -->
 
     <!-- Slider/Carousel -->
-
 <section class="carousel" aria-label="Gallery">
   <ol class="carousel__viewport">
     <li id="carousel__slide1"
@@ -127,6 +123,56 @@
     </ol>
   </aside>
 </section>
-    
+
+<section class="latest-posts">
+  <div class="heading-container">
+    <h2 class="heading">
+      Latest Posts
+      <div class="styled-heading"></div>
+    </h2>
+  </div>
+  <div class="carousel-container">
+    <div class="carousel-loader"></div>
+    <button class="carousel-prev">
+      <span class="material-icons-outlined"> chevron_left </span>
+    </button>
+    <button class="carousel-next">
+      <span class="material-icons-outlined"> chevron_right </span>
+    </button>
+    <div class="carousel-dots"></div>
+  </div>
+
+  <div class="heading-container featured">
+    <h2 class="heading">
+      Featured Posts
+      <div class="styled-heading"></div>
+    </h2>
+  </div>
+  <div id="posts-container" class="posts-container">
+    <div class="loader"></div>
+    <div class="post-template" style="display: none">
+      <div class="post-image-container">
+        <img class="post-image" src="" alt="" />
+      </div>
+      <div class="post-options">
+        <div class="post-date"></div>
+      </div>
+      <div class="post-title"></div>
+      <div class="post-excerpt"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+</main>
+
+<!-- JS -->
+<script defer src="/JS/navbar.js"></script>
+<script type="module" src="js/blog.js"></script>
+<script src="components/js/load-header.js"></script>
+<script src="/js/script.js" type="module"></script>
+
 </body>
 </html>
