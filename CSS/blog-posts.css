@@ -4,76 +4,65 @@
     box-sizing: border-box;
 }
 
-:root {}
-
 body,
 html {
     flex-flow: column;
     font-family: "Rubik", "Montserrat", system-ui, serif;
-    
-
 }
 
-
-  
-  main {
+main {
     padding-top: 10vh;
-  }
-  
+}
 
-  
-  a {
+a {
     text-decoration: none;
     color: black;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
-  [aria-current]:not([aria-current="false"]) {
+}
+
+[aria-current]:not([aria-current="false"]) {
     font-weight: bold;
-  }
-  
-  button {
+}
+
+button {
     background: none;
     border: 1px solid black;
     cursor: pointer;
     padding: 1rem;
     font-size: 1.5rem;
-  }
-  
-  button.view-more:hover {
+}
+
+button.view-more:hover {
     background-color: #e0dada;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     font-size: 3rem;
     margin-block: 2rem;
-  }
-  
+}
 
-  h2 {
+h2 {
     text-align: left;
     font-size: 1.5rem;
     margin-block: 2rem;
     border-bottom: 2px solid currentColor;
-  }
+}
 
-  
-  .fa-stack {
+.fa-stack {
     font-size: 0.5rem;
-  }
-  
-  .flex {
+}
+
+.flex {
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
-    
-  }
-  
-  .post {
+}
+
+.post {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -83,107 +72,104 @@ html {
     box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
     min-height: 50vh;
     border-radius: 15px 15px 0 0;
-  }
-  
-  .post img {
+}
+
+.post img {
     width: 100%;
     height: 30vh;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-  }
-  
-  .post-info {
+}
+
+.post-info {
     padding: 2rem;
-  }
-  
-  .post-info > * {
+}
+
+.post-info > * {
     padding-bottom: 0.4rem;
-  }
-  
-  .post-info p {
+}
+
+.post-info p {
     font-style: italic;
-  }
-  
-  .comment-info {
+}
+
+.comment-info {
     align-self: center;
     font-size: 0.8rem;
     padding: 2rem;
-  }
-  
-  button.view-more {
+}
+
+button.view-more {
     margin: 3rem;
-  }
-  
-  .more {
+}
+
+.more {
     text-align: center;
-  }
-  
-  .blog-post {
+}
+
+.blog-post {
     display: grid;
     grid-template-columns: 1fr;
     margin: 50px 0;
     min-height: calc(100vh - 50px);
-  }
+}
 
-  .blog-post img {
+.blog-post img {
     cursor: pointer;
     width: 100%;
     height: 30vh;
     object-fit: cover;
     margin-block: 1.5rem;
-  }
-  
-  .blog-post p {
+}
+
+.blog-post p {
     max-width: 80%;
     margin: 2rem auto;
-  }
-  
-  .blog-post p:has(iframe) {
+}
+
+.blog-post p:has(iframe) {
     min-width: 100%;
     margin: 0;
-  }
-  
-  .blog-post img:hover {
+}
+
+.blog-post img:hover {
     opacity: 0.7;
-  }
-  
-  .blog-post p:first-of-type {
+}
+
+.blog-post p:first-of-type {
     font-style: italic;
     text-align: left;
     min-width: 100%;
-  }
-  
-  .comments {
+}
+
+.comments {
     padding: 1rem;
     width: 100%;
     background-color: #c7c1c1;
-  }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (image) */
-  .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
-  }
-  
-  /* Caption of Modal Image */
-  #caption {
+}
+
+#caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -192,38 +178,36 @@ html {
     color: #ccc;
     padding: 10px 0;
     height: 150px;
-  }
-  
- 
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px) {
+}
+
+@media only screen and (max-width: 700px) {
     .modal-content {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  @media only screen and (min-width: 840px) {
-    .featured-posts, .posts-container    {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      margin: 1%;
-      gap: 1rem;
+}
+
+@media only screen and (min-width: 840px) {
+    .featured-posts,
+    .posts-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 1%;
+        gap: 1rem;
     }
-  
+
     .post {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 24%;
-      border: 0px solid rgb(255, 234, 0);
-      padding: 1rem;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 24%;
+        border: 0px solid rgb(255, 234, 0);
+        padding: 1rem;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
     }
-  
+
     .post > img {
-      width: 100%;
-      height: 30vh;
-      object-fit: cover;
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
     }
-  }
-  
+}
