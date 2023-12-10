@@ -53,14 +53,14 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const apiUrl = "https://nadstarr.com/wp-json/wp/v2/posts?per_page=4&_embed";
+  const apiUrl = "https://nadstarr.com/wp-json/wp/v2/posts?per_page=4";
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(posts => {
       const postsContainer = document.getElementById("posts-container");
 
-      posts.forEach(post => {
+      posts.forEach(async post => {
         const postDiv = document.createElement("div");
         postDiv.classList.add("post");
 
@@ -74,14 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
         titleLink.appendChild(title);
 
         // Check if the post has a featured image
-        if (post._embedded && post._embedded["wp:featuredmedia"]) {
-          const featuredMedia = post._embedded["wp:featuredmedia"][0];
+        if (post.featured_media) {
+          // Fetch the media details separately
+          const mediaResponse = await fetch(`https://nadstarr.com/wp-json/wp/v2/media/${post.featured_media}`);
+          const mediaData = await mediaResponse.json();
 
           // Check if the featured image has a source URL
-          if (featuredMedia.source_url) {
+          if (mediaData.source_url) {
             // Create and append the image
             const image = document.createElement("img");
-            image.src = featuredMedia.source_url;
+            image.src = mediaData.source_url;
             image.alt = post.title.rendered;
             postDiv.appendChild(image);
           }
