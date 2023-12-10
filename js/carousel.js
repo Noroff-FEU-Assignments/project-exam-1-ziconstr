@@ -84,7 +84,10 @@ async function getCarouselImages() {
     slides.forEach((slide, idx) => {
       const postLink = document.createElement("a");
       postLink.href = details[idx].link; // Assuming "link" property contains the post URL
-      postLink.target = "_blank"; // Open the link in a new tab/window
+      postLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = details[idx].link;
+      });
 
       const image = document.createElement("img");
       image.src = details[idx]["_embedded"]["wp:featuredmedia"][0].source_url;
