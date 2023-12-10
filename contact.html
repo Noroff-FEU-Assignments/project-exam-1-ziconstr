@@ -17,10 +17,14 @@
 <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/navbar.css">
-    <link rel="stylesheet" href="/CSS/carousel.css">
-    <link rel="stylesheet" href="/CSS/blog-posts.css">
+    <link rel="stylesheet" href="/CSS/contact.css">
 
-
+<!-- JS -->
+    <script defer src="/JS/navbar.js"></script>
+    <script type="module" src="js/blog.js"></script>
+    <script src="components/js/load-header.js"></script>
+    <script src="/js/script.js" type="module"></script>
+    <script src="/js/contact.js" type="module"></script>
 
 <!-- Hotjar Tracking Code for Food and Tech -->
 <script>
@@ -62,46 +66,32 @@
 
 <!-- The rest of your webpage content goes here -->
 
-    <!-- Slider/Carousel -->
-    <div class="carousel">
-      <div class="slider">
-        <!-- slide 1 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
-
-        <!-- slide 2 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
-
-        <!-- slide 3 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
-
-        <!-- slide 4 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
-
-        <!-- Control buttons -->
-        <button class="btn btn-next">></button>
-        <button class="btn btn-prev"><</button>
-      </div>
+<div class="contact-section">
+    <h1 class="contact-heading">We'd Love to Hear From You!</h1>
+    <div class="contact-text">
+        "I'm on a journey to self-improvement and would greatly value your opinion on my blog. Any suggestions you have would be highly appreciated. Thank you!"
     </div>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <div id="nameError" class="error"></div>
 
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <div id="emailError" class="error"></div>
 
-<!-- Latest post -->
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" />
+      <div id="subjectError" class="error"></div>
 
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+      <div id="messageError" class="error"></div>
 
-  <section class="head-info">
-      <h1>Latest Posts</h1>
-      <div class="posts-container" id="posts-container"></div>
-  <h1><a href="/blog-posts.html">Most popular articles</a></h1>
-  <section class="container-for-items"></section>
-</div>
-</section>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
 
 </main>
 
@@ -134,12 +124,4 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
-
-<!-- JS -->
-<script defer src="/JS/navbar.js"></script>
-<script type="module" src="js/blog.js"></script>
-<script type="module" src="js/carousel.js"></script>
-<script type="module" src="js/formain.js"></script>
-<script type="module" src="js/featured.js"></script>
-
 </html>

@@ -10,18 +10,16 @@ body,
 html {
     flex-flow: column;
     font-family: "Rubik", "Montserrat", system-ui, serif;
-    margin: 0;
+
 }
 
 .navbar {
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
-    padding: 0.70rem 15vw;
-    box-shadow: 0 0 30px rgb(255, 255, 255);
-    
+    font-size: 1.25rem;
+    padding: 0.70rem 18vw;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 
     
 }

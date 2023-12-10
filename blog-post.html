@@ -17,19 +17,16 @@
 <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/navbar.css">
-    <link rel="stylesheet" href="/CSS/slider.css">
+    <link rel="stylesheet" href="/CSS/contact.css">
 
-<!-- CSS -->
+<!-- JS -->
     <script defer src="/JS/navbar.js"></script>
-    <script defer src="/JS/slider.js"></script>
-    <script defer src="/JS/blogs.js"></script>
-    <script defer src="/JS/script.js"></script>
+    <script type="module" src="js/blog.js"></script>
+    <script src="components/js/load-header.js"></script>
     <script src="/js/script.js" type="module"></script>
-
-
+    <script src="/js/contact.js" type="module"></script>
 
 <!-- Hotjar Tracking Code for Food and Tech -->
-
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -59,9 +56,9 @@
             <div class="navbar-links">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/blogs.html">Blogs</a></li>
-                    <li><a href="/index.html">About</a></li>
-                    <li><a href="/index.html">Contact</a></li>
+                    <li><a href="/blog-posts.html">Blogs</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -69,10 +66,47 @@
 
 <!-- The rest of your webpage content goes here -->
 
-    <!-- Slider/Carousel -->
-    <main>
-      <div id="blog-container"></div>
-    </main>
-    
+<section class="blog-post"></section>
+<section class="comments"></section>
+
+<dialog id="modal" class="modal">
+  <img class="modal-content" id="image">
+  <div id="caption"></div>
+</dialog>
+
+
+
+</main>
+
+
+
+<!-- Footer starts here -->
+
+
+<footer class="footer">
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="https://facebook.com">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://linkedin.com">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://instagram.com">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <p>&copy;2023 NSTR | All Rights Reserved</p>
+
+</footer>
+
+<!-- Footer icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+<script src="./js/blogPost.js"></script>
+<script src="./js/utilities.js"></script>
 </html>

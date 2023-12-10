@@ -17,9 +17,7 @@
 <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/navbar.css">
-    <link rel="stylesheet" href="/CSS/carousel.css">
     <link rel="stylesheet" href="/CSS/blog-posts.css">
-
 
 
 <!-- Hotjar Tracking Code for Food and Tech -->
@@ -62,46 +60,30 @@
 
 <!-- The rest of your webpage content goes here -->
 
-    <!-- Slider/Carousel -->
-    <div class="carousel">
-      <div class="slider">
-        <!-- slide 1 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
+<h1>Blogs</h1>
+    <section class="featured-posts">
 
-        <!-- slide 2 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
+      <article class="post">
+        <a href="#">
 
-        <!-- slide 3 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
+          <div class="flex">
+            <div class="post-info">
+              <h2>Title</h2>
+              <p>published Date</p>
+              <p>by Author</p>
+            </div>
+            <div class="comment-info">
+              <span class="comment-icon fa-stack fa-2x">
+                <i class="fa-regular fa-comment fa-stack-2x"></i>
+                <i class="fab fa-${commentNumber} fa-stack-1x"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </article>
 
-        <!-- slide 4 -->
-        <div class="slide">
-          <img src="" alt="image of the post" />
-        </div>
+    </section>
 
-        <!-- Control buttons -->
-        <button class="btn btn-next">></button>
-        <button class="btn btn-prev"><</button>
-      </div>
-    </div>
-
-
-<!-- Latest post -->
-
-
-  <section class="head-info">
-      <h1>Latest Posts</h1>
-      <div class="posts-container" id="posts-container"></div>
-  <h1><a href="/blog-posts.html">Most popular articles</a></h1>
-  <section class="container-for-items"></section>
-</div>
-</section>
 
 </main>
 
@@ -135,11 +117,11 @@
 
 </body>
 
+
+
 <!-- JS -->
 <script defer src="/JS/navbar.js"></script>
+<script src="./js/index.js"></script>
 <script type="module" src="js/blog.js"></script>
-<script type="module" src="js/carousel.js"></script>
-<script type="module" src="js/formain.js"></script>
-<script type="module" src="js/featured.js"></script>
-
+<script src="./js/utilities.js"></script>
 </html>
