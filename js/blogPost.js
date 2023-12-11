@@ -1,3 +1,5 @@
+// 
+
 const blogContainer = document.querySelector(".blog-post");
 const commentsContainer = document.querySelector(".comments");
 
@@ -22,7 +24,7 @@ async function getPost(url) {
       : "Photo missing";
     const postContent = data.content.rendered;
     const comments = data._embedded.replies
-      ? data._embedded.replies[0]
+      ? data._embedded.replies[0].content.rendered
       : "No comments";
 
     document.title += " " + postTitle;
@@ -40,50 +42,28 @@ async function getPost(url) {
     if (typeof comments === "string") {
       commentsContainer.innerHTML += comments;
     } else {
+      commentsContainer.innerHTML = `
+        <h2>Comments</h2>
+      `;
       comments.forEach((comment) => {
         const commentAuthor = comment.author_name;
         const commentDate = comment.date;
         const commentAuthorAvatar = comment.author_avatar_urls[48];
         const commentContent = comment.content.rendered;
 
-        commentsContainer.innerHTML = `
-        <h2>Comments</h2>
-        <div class="comment">
-        <img src="${commentAuthorAvatar}" alt="${commentAuthor} avatar" />
-        <p>${commentAuthor}</p>
-        <p>${commentDate}</p>
-        ${commentContent}
-        </div>
+        commentsContainer.innerHTML += `
+          <div class="comment">
+            <img src="${commentAuthorAvatar}" alt="${commentAuthor} avatar" />
+            <p>${commentAuthor}</p>
+            <p>${commentDate}</p>
+            ${commentContent}
+          </div>
         `;
       });
     }
 
-    const modal = document.querySelector("#modal");
-    const modalImage = modal.querySelector("#image");
-    const modalImageAlt = modal.querySelector("#caption");
+    // Rest of your code...
 
-    const allImages = blogContainer.querySelectorAll("img");
-
-    allImages.forEach((img) =>
-      img.addEventListener("click", () => {
-        modalImage.src = img.src;
-        modalImage.alt = img.alt;
-        modalImageAlt.innerText = img.alt;
-        modal.style.display = "block";
-      })
-    );
-
-    document.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-
-    document.addEventListener("keyup", (event) => {
-      if (event.code === "Escape") modal.style.display = "none";
-    });
-
-    //console.log(allImages);
   } catch (error) {
     blogContainer.innerHTML =
       "There was an error.. See the console for more information.";

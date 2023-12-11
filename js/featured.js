@@ -53,7 +53,7 @@
 
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const apiUrl = "https://nadstarr.com/wp-json/wp/v2/posts?per_page=4";
+  const apiUrl = "https://nadstarr.com/wp-json/wp/v2/posts?per_page=5";
   const postsContainer = document.getElementById("posts-container");
 
   try {
